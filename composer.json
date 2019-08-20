@@ -1,0 +1,13 @@
+{
+    "name": "daemond/brain-games",
+    "description": "Mind exercises",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dima Antonenko",
+            "email": "daemondw@gmail.com"
+        }
+    ],
+    "require": {}
+}
