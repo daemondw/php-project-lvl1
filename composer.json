@@ -3,7 +3,10 @@
     "description": "Mind exercises",
     "type": "project",
     "license": "MIT",
-    "bin": ["bin/brain-games"],
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even"
+    ],
     "authors": [
         {
             "name": "Dima Antonenko",

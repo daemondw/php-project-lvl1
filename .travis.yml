@@ -1,12 +1,10 @@
 language: php
 php:
   - '7.3.8'
+install:
+  - make install
 
 jobs:
   include:
-    - stage: install libraries
-      script: make install
-    - stage: linter tests
+    - stage: linter
       script: make lint
-    - stage: unit tests
-      script: make test
