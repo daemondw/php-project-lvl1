@@ -2,8 +2,11 @@ language: php
 php:
   - '7.3.8'
 
-install:
-  - composer self-update
-  - make install
-
-script: make lint
+jobs:
+  include:
+    - stage: install libraries
+      script: make install
+    - stage: linter tests
+      script: make lint
+    - stage: unit tests
+      script: make test
