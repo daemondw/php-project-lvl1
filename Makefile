@@ -1,5 +1,7 @@
 install:
 	composer install
 
-lint:
+lint install:
+
+
 	composer run-script phpcs -- --standard=PSR12 src bin
