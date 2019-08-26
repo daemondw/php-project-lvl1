@@ -2,9 +2,8 @@ language: php
 php:
   - '7.3.8'
 
-before_install:
-  - travis_retry composer self-update
 install:
+  - composer self-update
   - make install
 
 script: make lint
