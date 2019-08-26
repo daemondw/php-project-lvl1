@@ -1,10 +1,8 @@
 language: php
 php:
   - '7.3.8'
+  
 install:
   - make install
 
-jobs:
-  include:
-    - stage: linter
-      script: make lint
+script: make lint
