@@ -20,7 +20,7 @@
         ]
     },
     "scripts": {
-        "phpcs": "phpcs"
+        "phpcs": "./vendor/squizlabs/php_codesniffer/bin/phpcs"
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
