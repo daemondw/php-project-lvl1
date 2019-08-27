@@ -20,7 +20,7 @@
         ]
     },
     "scripts": {
-        "phpcs": "phpcs",
+        "phpcs": "./vendor/bin/phpcs",
         "phpcbf": "phpcbf"
     },
     "require": {
