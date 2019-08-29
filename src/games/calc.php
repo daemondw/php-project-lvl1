@@ -21,11 +21,11 @@ function goCalc()
             $rightAnswer = $number1 + $number2;
         } elseif ($randSymbol == '-') {
             $rightAnswer = $number1 - $number2;
-        } else ($randSymbol == '*') {
+        } else {
             $rightAnswer = $number1 * $number2;
         }
-
         return [$rightAnswer, $gues];
     };
+    
     goGame($createData, EXPLANATION);
 }
