@@ -16,15 +16,15 @@ function goGame($getInfo, $instr)
     line("Hello, ${name}!" . PHP_EOL);
 
     for ($i = 0; $i < MAX_TRY; $i += 1) {
-        [$right, $gues] = $getInfo();
+        [$rightAnswer, $gues] = $getInfo();
 
         line("Question: {$gues}");
         $answer = prompt('Your answer');
 
-        if ($right == $answer) {
+        if ($rightAnswer == $answer) {
             line("Correct!");
         } else {
-            line("'${answer}' is wrong answer ;(. Correct answer was '${right}'.");
+            line("'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.");
             line("Let's try again, ${name}!");
             exit();
         }
