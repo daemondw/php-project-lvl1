@@ -13,12 +13,12 @@ function goGame(callable $getInfo, string $instr)
     line($instr . PHP_EOL);
 
     $name = prompt('May I have your name?');
-    line("Hello, %s!", $name . PHP_EOL);
+    line("Hello, ${name}!" . PHP_EOL);
 
     for ($i = 0; $i < MAX_TRY; $i += 1) {
-        [$right, $question] = $getInfo();
+        [$right, $ques] = $getInfo();
 
-        line("Question: {$question}");
+        line("Question: {$gues}");
         $answer = prompt('Your answer');
 
         if ($right == $answer) {
