@@ -18,19 +18,17 @@ function goCalc()
         $gues = "$number1 $randSymbol $number2";
 
         switch ($randSymbol) {
-        case '+':
-            $rightAnswer = $number1 + $number2;
-            break;
-        case '-':
-            $rightAnswer = $number1 - $number2;
-            break;
-        case '*':
-            $rightAnswer = $number1 * $number2;
-            break;
+            case '+':
+                $rightAnswer = $number1 + $number2;
+                break;
+            case '-':
+                $rightAnswer = $number1 - $number2;
+                break;
+            case '*':
+                $rightAnswer = $number1 * $number2;
+                break;
         }
-
         return [$rightAnswer, $gues];
     };
-
     goGame($createData, EXPLANATION);
 }
