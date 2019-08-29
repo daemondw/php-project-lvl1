@@ -15,7 +15,7 @@
     ],
     "autoload": {
         "files": [
-            "src/Game.php"
+            "src/Game.php",
             "src/games/even.php"
         ]
     },
