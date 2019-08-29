@@ -17,15 +17,20 @@ function goCalc()
 
         $gues = "$number1 $randSymbol $number2";
 
-        if ($randSymbol == '+') {
+        switch ($randSymbol) {
+        case '+':
             $rightAnswer = $number1 + $number2;
-        } elseif ($randSymbol == '-') {
+            break;
+        case '-':
             $rightAnswer = $number1 - $number2;
-        } else {
+            break;
+        case '*':
             $rightAnswer = $number1 * $number2;
+            break;
         }
+
         return [$rightAnswer, $gues];
     };
-    
+
     goGame($createData, EXPLANATION);
 }
