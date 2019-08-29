@@ -5,3 +5,5 @@
 [![Build Status](https://travis-ci.org/daemondw/php-project-lvl1.svg?branch=master)](https://travis-ci.org/daemondw/php-project-lvl1)
 
 https://asciinema.org/a/T0a5eaftgu15fqzHxygwVjhUd
+
+https://asciinema.org/a/pH1wk2eMVjvu9v0OWTNApUjXF
