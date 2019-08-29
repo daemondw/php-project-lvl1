@@ -2,19 +2,20 @@
 
 namespace BrainGames\Games\Even;
 
-use function BrainGames\Game\play;
-const INSTRUCTION = 'Answer "yes" if number even otherwise answer "no".';
+use function BrainGames\Game\goGame;
 
-function runEven()
+const EXPLANATION = 'Answer "yes" if number even otherwise answer "no".';
+
+function goEven()
 {
-    $makeGameData = function () {
-        $question = rand(0, 99);
-        $correctAnswer = isEven($question) ? 'yes' : 'no';
-        return [$correctAnswer, $question];
+    $createData = function () {
+        $gues = rand(0, 99);
+        $rightAnswer = even($gues) ? 'yes' : 'no';
+        return [$rightAnswer, $gues];
     };
-    play($makeGameData, INSTRUCTION);
+    goGame($createData, EXPLANATION);
 }
-function isEven($num)
+function even($num)
 {
     return $num % 2 === 0;
 }
