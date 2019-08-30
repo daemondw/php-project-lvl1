@@ -9,7 +9,7 @@ const EXPLANATION = 'Answer "yes" if given number is prime. Otherwise answer "no
 function goPrime()
 {
     $createData = function () {
-        $randNum = rand(1, 3500);
+        $randNum = rand(1, 1087);
 
         $gues = "$randNum";
         $rightAnswer = pri($randNum) ? "yes" : "no";
