@@ -20,17 +20,18 @@ function goGcd()
     };
     goGame($createData, EXPLANATION);
 }
-
 function gcd($num1, $num2)
 {
     $lessNum = $num1 < $num2 ? $num1 : $num2;
     $result = 0;
 
-    while ($num1 % $lessNum == 0 && $num2 % $lessNum == 0) {
-        if ($num1 % $lessNum == 0 && $num2 % $lessNum == 0) {
+    while ($lessNum >= 0) {
+        if ($lessNum == 0) {
+            return "There is no such divider";
+        } elseif ($num1 % $lessNum == 0 && $num2 % $lessNum == 0) {
             $result = $lessNum;
         }
         $lessNum -= 1;
     }
-    return ($result);
+    return $result;
 }
