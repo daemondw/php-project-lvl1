@@ -5,7 +5,8 @@
     "license": "MIT",
     "bin": [
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
     ],
     "authors": [
         {
@@ -17,7 +18,8 @@
         "files": [
             "src/Game.php",
             "src/games/even.php",
-            "src/games/calc.php"
+            "src/games/calc.php",
+            "src/games/gcd.php"
         ]
     },
     "scripts": {
