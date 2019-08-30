@@ -13,8 +13,9 @@ function goProg()
         $arr = [5, 7, 9, 11, 13, 15, 17, 19, 21, 23,];
         $rightAnswer = $arr[$randNum];
         $arr[$randNum] = '..';
+        $str = implode(' ', $arr);
 
-        $gues = "$arr";
+        $gues = "$str";
        
         return [$rightAnswer, $gues];
     };
