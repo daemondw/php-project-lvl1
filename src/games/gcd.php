@@ -22,5 +22,12 @@ function goGcd()
 }
 function gcd($num1, $num2)
 {
-    return ($num2 > 0) ? gcd($num2, $num1 % $num2) : $num1;
+    $less = $num1 < $num2 ? $num1 : $num2;
+    while ($less > 0) {
+        if ($num1 % $less == 0 && $num2 % $less == 0) {
+            return $less;
+        }
+        $less -= 1;
+    }
+    return $less;
 }
