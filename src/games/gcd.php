@@ -9,8 +9,8 @@ const EXPLANATION = 'Find the greatest common divisor of given numbers.';
 function goGcd()
 {
     $createData = function () {
-        $number1 = rand(0, 100);
-        $number2 = rand(0, 100);
+        $number1 = rand(1, 100);
+        $number2 = rand(1, 500);
 
         $gues = "$number1 $number2";
 
@@ -22,16 +22,5 @@ function goGcd()
 }
 function gcd($num1, $num2)
 {
-    $lessNum = $num1 < $num2 ? $num1 : $num2;
-    $result = 0;
-
-    while ($lessNum >= 0) {
-        if ($lessNum == 0) {
-            return "There is no such divider";
-        } elseif ($num1 % $lessNum == 0 && $num2 % $lessNum == 0) {
-            $result = $lessNum;
-        }
-        $lessNum -= 1;
-    }
-    return $result;
+    return ($num2 > 0) ? gcd($num2, $num1 % $num2) : $num1;
 }
