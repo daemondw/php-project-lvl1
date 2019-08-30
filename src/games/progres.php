@@ -20,4 +20,3 @@ function goProg()
     };
     goGame($createData, EXPLANATION);
 }
-
