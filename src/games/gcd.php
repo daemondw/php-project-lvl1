@@ -6,7 +6,7 @@ use function BrainGames\Game\goGame;
 
 const EXPLANATION = 'Find the greatest common divisor of given numbers.';
 
-function goGcd()
+function showGreatestCommonDevisor()
 {
     $createData = function () {
         $number1 = rand(1, 100);
@@ -14,13 +14,13 @@ function goGcd()
 
         $gues = "$number1 $number2";
 
-        $rightAnswer = gcd($number1, $number2);
+        $rightAnswer = getGreatestCommonDevisor($number1, $number2);
        
         return [$rightAnswer, $gues];
     };
     goGame($createData, EXPLANATION);
 }
-function gcd($num1, $num2)
+function getGreatestCommonDevisor($num1, $num2)
 {
     $less = $num1 < $num2 ? $num1 : $num2;
     while ($less > 0) {

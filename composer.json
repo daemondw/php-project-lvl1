@@ -2,7 +2,11 @@
     "name": "daemond/brain-games",
     "description": "Mind exercises",
     "type": "project",
-    "keywords": ["game", "brain", "terminal programms"],
+    "keywords": [
+        "game",
+        "brain",
+        "terminal programms"
+    ],
     "license": "MIT",
     "bin": [
         "bin/brain-games",

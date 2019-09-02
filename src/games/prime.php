@@ -9,19 +9,21 @@ const EXPLANATION = 'Answer "yes" if given number is prime. Otherwise answer "no
 function goPrime()
 {
     $createData = function () {
-        $randNum = rand(1, 1087);
-
-        $gues = "$randNum";
-        $rightAnswer = getPrime($randNum) ? "yes" : "no";
+        $gues = rand(1, 1087);
+        
+        $rightAnswer = getPrime($gues) ? "yes" : "no";
 
         return [$rightAnswer, $gues];
     };
     goGame($createData, EXPLANATION);
 }
-function getPrime($someNum)
+function getPrime($num)
 {
-    for ($i = 2; $i <= sqrt($someNum); $i += 1) {
-        if ($someNum % $i == 0) {
+    if ($gues < 2) {
+        return false;
+    }
+    for ($i = 2; $i <= sqrt($num); $i += 1) {
+        if ($num % $i == 0) {
             return false;
         }
     }

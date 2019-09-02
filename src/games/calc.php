@@ -6,14 +6,14 @@ use function BrainGames\Game\goGame;
 
 const EXPLANATION = 'What is the result of the expression?';
 
-const COUNT_SYMBOLS = ['+', '-', '*'];
+const MATH_SIGNS = ['+', '-', '*'];
 
 function goCalc()
 {
     $createData = function () {
         $number1 = rand(0, 50);
         $number2 = rand(0, 50);
-        $randSymbol = COUNT_SYMBOLS[array_rand(COUNT_SYMBOLS)];
+        $randSymbol = MATH_SIGNS[array_rand(MATH_SIGNS)];
 
         $gues = "$number1 $randSymbol $number2";
 

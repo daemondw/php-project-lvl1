@@ -10,12 +10,12 @@ function goEven()
 {
     $createData = function () {
         $gues = rand(0, 99);
-        $rightAnswer = even($gues) ? 'yes' : 'no';
+        $rightAnswer = isEven($gues) ? 'yes' : 'no';
         return [$rightAnswer, $gues];
     };
     goGame($createData, EXPLANATION);
 }
-function even($num)
+function isEven($num)
 {
     return $num % 2 === 0;
 }
