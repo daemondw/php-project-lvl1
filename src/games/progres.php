@@ -9,28 +9,26 @@ const EXPLANATION = 'What number is missing in the progression?';
 function goProg()
 {
     $createData = function () {
-        $randNum = rand(0, count($arr) - 1);
         $firstArrayElement = rand(1, 100);
         $stepProgression = rand(1, 50);
-        $arr = generateArray();
-
+        $arr = generateArray($firstArrayElement, $stepProgression);
+        $randNum = rand(0, count($arr) - 1);
+        
         $rightAnswer = $arr[$randNum];
         $arr[$randNum] = '..';
         $gues = implode(' ', $arr);
-
-        // $gues = "$str";
        
         return [$rightAnswer, $gues];
     };
     goGame($createData, EXPLANATION);
 }
-function generateArray($firstArrayElement, $stepProgression)
+function generateArray($first, $step)
 {
-    $result = [$firstArrayElement];
+    $result = [];
 
     for ($i = 0; $i < 10; $i += 1) {
-        $firstArrayElement += $stepProgression;
-        $result[] = $firstArrayElement;
+        $first += $step;
+        $result[] = $first;
     }
     return $result;
 }
