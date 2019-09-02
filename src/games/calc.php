@@ -2,13 +2,13 @@
 
 namespace BrainGames\Games\Calc;
 
-use function BrainGames\Game\goGame;
+use function BrainGames\Game\play;
 
 const EXPLANATION = 'What is the result of the expression?';
 
 const MATH_SIGNS = ['+', '-', '*'];
 
-function goCalc()
+function calculate()
 {
     $createData = function () {
         $number1 = rand(0, 50);
@@ -30,5 +30,5 @@ function goCalc()
         }
         return [$rightAnswer, $gues];
     };
-    goGame($createData, EXPLANATION);
+    play($createData, EXPLANATION);
 }

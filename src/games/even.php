@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Even;
 
-use function BrainGames\Game\goGame;
+use function BrainGames\Game\play;
 
 const EXPLANATION = 'Answer "yes" if number even otherwise answer "no".';
 
@@ -13,7 +13,7 @@ function goEven()
         $rightAnswer = isEven($gues) ? 'yes' : 'no';
         return [$rightAnswer, $gues];
     };
-    goGame($createData, EXPLANATION);
+    play($createData, EXPLANATION);
 }
 function isEven($num)
 {

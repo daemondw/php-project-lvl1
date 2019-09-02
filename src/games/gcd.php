@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Gcd;
 
-use function BrainGames\Game\goGame;
+use function BrainGames\Game\play;
 
 const EXPLANATION = 'Find the greatest common divisor of given numbers.';
 
@@ -18,7 +18,7 @@ function showGreatestCommonDevisor()
        
         return [$rightAnswer, $gues];
     };
-    goGame($createData, EXPLANATION);
+    play($createData, EXPLANATION);
 }
 function getGreatestCommonDevisor($num1, $num2)
 {

@@ -5,9 +5,9 @@ namespace BrainGames\Game;
 use function \cli\line;
 use function \cli\prompt;
 
-const MAX_TRY = 3;
+const ROUNDS_COUNT = 3;
 
-function goGame($getInfo, $instr)
+function play($getInfo, $instr)
 {
     line('Welcome to the Brain Game!');
     line($instr . PHP_EOL);
@@ -15,7 +15,7 @@ function goGame($getInfo, $instr)
     $name = prompt('May I have your name?');
     line("Hello, ${name}!" . PHP_EOL);
 
-    for ($i = 0; $i < MAX_TRY; $i += 1) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
         [$rightAnswer, $gues] = $getInfo();
 
         line("Question: {$gues}");

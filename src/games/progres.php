@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Progres;
 
-use function BrainGames\Game\goGame;
+use function BrainGames\Game\play;
 
 const EXPLANATION = 'What number is missing in the progression?';
 
@@ -20,7 +20,7 @@ function goProg()
        
         return [$rightAnswer, $gues];
     };
-    goGame($createData, EXPLANATION);
+    play($createData, EXPLANATION);
 }
 function generateArray($first, $step)
 {
