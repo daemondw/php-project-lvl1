@@ -8,18 +8,18 @@
         "terminal programms"
     ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Dima Antonenko",
+            "email": "daemondw@gmail.com"
+        }
+    ],
     "bin": [
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
         "bin/brain-progression",
         "bin/brain-prime"
-    ],
-    "authors": [
-        {
-            "name": "Dima Antonenko",
-            "email": "daemondw@gmail.com"
-        }
     ],
     "autoload": {
         "files": [
@@ -32,7 +32,7 @@
         ]
     },
     "scripts": {
-        "phpcs": "./vendor/squizlabs/php_codesniffer/bin/phpcs"
+        "phpcs": "phpcs"
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
