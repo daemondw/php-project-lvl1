@@ -20,7 +20,7 @@ function goPrime()
 
 function isPrime($num)
 {
-    if ($gues < 2) {
+    if ($num < 2) {
         return false;
     }
     for ($i = 2; $i <= sqrt($num); $i += 1) {
