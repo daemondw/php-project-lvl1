@@ -5,7 +5,6 @@ namespace BrainGames\Games\Calc;
 use function BrainGames\Game\play;
 
 const EXPLANATION = 'What is the result of the expression?';
-
 const MATH_SIGNS = ['+', '-', '*'];
 
 function calculate()
@@ -30,5 +29,6 @@ function calculate()
         }
         return [$rightAnswer, $gues];
     };
+
     play($createData, EXPLANATION);
 }

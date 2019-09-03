@@ -20,8 +20,10 @@ function goProg()
        
         return [$rightAnswer, $gues];
     };
+
     play($createData, EXPLANATION);
 }
+
 function generateArray($first, $step)
 {
     $result = [];

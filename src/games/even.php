@@ -15,6 +15,7 @@ function goEven()
     };
     play($createData, EXPLANATION);
 }
+
 function isEven($num)
 {
     return $num % 2 === 0;

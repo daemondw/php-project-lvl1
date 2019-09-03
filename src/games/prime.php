@@ -11,13 +11,14 @@ function goPrime()
     $createData = function () {
         $gues = rand(1, 1087);
         
-        $rightAnswer = getPrime($gues) ? "yes" : "no";
+        $rightAnswer = isPrime($gues) ? "yes" : "no";
 
         return [$rightAnswer, $gues];
     };
     play($createData, EXPLANATION);
 }
-function getPrime($num)
+
+function isPrime($num)
 {
     if ($gues < 2) {
         return false;
