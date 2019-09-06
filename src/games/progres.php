@@ -9,9 +9,7 @@ const EXPLANATION = 'What number is missing in the progression?';
 function progressionGame()
 {
     $createData = function () {
-        $first_array_alement = rand(1, 100);
-        $step_progression = rand(1, 50);
-        $arr = generateProgression($first_array_alement, $step_progression);
+        $arr = generateProgression();
         $rand_number = rand(0, count($arr) - 1);
         
         $right_answer = $arr[$rand_number];
@@ -24,8 +22,10 @@ function progressionGame()
     play($createData, EXPLANATION);
 }
 
-function generateProgression($first, $step)
+function generateProgression()
 {
+    $first = rand(1, 100);
+    $step = rand(1, 50);
     $result = [];
 
     for ($i = 0; $i < 10; $i += 1) {
