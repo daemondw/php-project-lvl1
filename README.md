@@ -1,4 +1,4 @@
-#Brain-games/php-project-lvl1
+# Brain-games/php-project-lvl1
 
 Brain-games is a simple set of terminal mini-games.
 
@@ -8,7 +8,7 @@ Brain-games is a simple set of terminal mini-games.
 
 [![Build Status](https://travis-ci.org/daemondw/php-project-lvl1.svg?branch=master)](https://travis-ci.org/daemondw/php-project-lvl1)
 
-##Instalation
+## Instalation
 
 Use following command to install brain-games: 
 
@@ -16,9 +16,9 @@ Use following command to install brain-games:
 composer global require daemond/brain-games
 ```
 
-##Usage
+## Usage
 
-##Brain Even Game
+## Brain Even Game
 
 Answer "yes" if the number is even, otherwise answer "no".
 
@@ -29,7 +29,7 @@ brain-even
 https://asciinema.org/a/R5yIJFBGzuScX6y0Tu4w3GFIU
 
 
-##Brain Calc Game
+## Brain Calc Game
 
 What is the result of the expression?
 
@@ -40,7 +40,7 @@ brain-calc
 https://asciinema.org/a/ZiWhVRP70ZuKPoyeGQF62IvLp
 
 
-##Brain GCD Game
+## Brain GCD Game
 
 Find the greatest common divisor of given numbers.
 
@@ -51,7 +51,7 @@ brain-gcd
 https://asciinema.org/a/OYa3wmTvBahDMG7Gx4lH4OL7R
 
 
-##Brain Progression Game
+## Brain Progression Game
 
 What number is missing in the progression?
 
@@ -59,10 +59,10 @@ What number is missing in the progression?
 brain-progression
 ```
 
-https://asciinema.org/a/Pj2jTdq3g8WkFOnDR8cvnjPSy
+https://asciinema.org/a/t1hIAMrvFpDgXO9ep4GMSs6sI
 
 
-##Brain Prime Game
+## Brain Prime Game
 
 Answer "yes" if given number is prime. Otherwise answer "no".
 
