@@ -7,27 +7,27 @@ use function BrainGames\Game\play;
 const EXPLANATION = 'What is the result of the expression?';
 const MATH_SIGNS = ['+', '-', '*'];
 
-function calculate()
+function calcGame()
 {
     $createData = function () {
         $number1 = rand(0, 50);
         $number2 = rand(0, 50);
-        $randSymbol = MATH_SIGNS[array_rand(MATH_SIGNS)];
+        $sign = MATH_SIGNS[rand(0, 2)];
 
-        $gues = "$number1 $randSymbol $number2";
+        $question_for_player = "$number1 $sign $number2";
 
-        switch ($randSymbol) {
+        switch ($sign) {
             case '+':
-                $rightAnswer = $number1 + $number2;
+                $right_answer = $number1 + $number2;
                 break;
             case '-':
-                $rightAnswer = $number1 - $number2;
+                $right_answer = $number1 - $number2;
                 break;
             case '*':
-                $rightAnswer = $number1 * $number2;
+                $right_answer = $number1 * $number2;
                 break;
         }
-        return [$rightAnswer, $gues];
+        return [$right_answer, $question_for_player];
     };
 
     play($createData, EXPLANATION);

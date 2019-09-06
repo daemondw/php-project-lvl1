@@ -6,14 +6,14 @@ use function BrainGames\Game\play;
 
 const EXPLANATION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function goPrime()
+function primeGame()
 {
     $createData = function () {
-        $gues = rand(1, 1087);
+        $question_for_player = rand(1, 1087);
         
-        $rightAnswer = isPrime($gues) ? "yes" : "no";
+        $right_answer = isPrime($question_for_player) ? "yes" : "no";
 
-        return [$rightAnswer, $gues];
+        return [$right_answer, $question_for_player];
     };
     play($createData, EXPLANATION);
 }

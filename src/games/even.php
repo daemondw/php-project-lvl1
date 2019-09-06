@@ -6,12 +6,12 @@ use function BrainGames\Game\play;
 
 const EXPLANATION = 'Answer "yes" if number even otherwise answer "no".';
 
-function goEven()
+function evenGame()
 {
     $createData = function () {
-        $gues = rand(0, 99);
-        $rightAnswer = isEven($gues) ? 'yes' : 'no';
-        return [$rightAnswer, $gues];
+        $question_for_player = rand(0, 99);
+        $right_answer = isEven($question_for_player) ? 'yes' : 'no';
+        return [$right_answer, $question_for_player];
     };
     play($createData, EXPLANATION);
 }

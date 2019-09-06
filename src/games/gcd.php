@@ -6,28 +6,28 @@ use function BrainGames\Game\play;
 
 const EXPLANATION = 'Find the greatest common divisor of given numbers.';
 
-function showGreatestCommonDevisor()
+function gcdGame()
 {
     $createData = function () {
         $number1 = rand(1, 100);
         $number2 = rand(1, 500);
 
-        $gues = "$number1 $number2";
+        $question_for_player = "$number1 $number2";
 
-        $rightAnswer = getGreatestCommonDevisor($number1, $number2);
+        $right_answer = getGcdGame($number1, $number2);
        
-        return [$rightAnswer, $gues];
+        return [$right_answer, $question_for_player];
     };
     play($createData, EXPLANATION);
 }
-function getGreatestCommonDevisor($num1, $num2)
+function getGcdGame($num1, $num2)
 {
-    $less = $num1 < $num2 ? $num1 : $num2;
-    while ($less > 0) {
-        if ($num1 % $less == 0 && $num2 % $less == 0) {
-            return $less;
+    $min = $num1 < $num2 ? $num1 : $num2;
+    while ($min > 0) {
+        if ($num1 % $min == 0 && $num2 % $min == 0) {
+            return $min;
         }
-        $less -= 1;
+        $min -= 1;
     }
-    return $less;
+    return $min;
 }

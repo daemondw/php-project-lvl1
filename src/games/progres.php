@@ -6,25 +6,25 @@ use function BrainGames\Game\play;
 
 const EXPLANATION = 'What number is missing in the progression?';
 
-function goProg()
+function progressGame()
 {
     $createData = function () {
-        $firstArrayElement = rand(1, 100);
-        $stepProgression = rand(1, 50);
-        $arr = generateArray($firstArrayElement, $stepProgression);
-        $randNum = rand(0, count($arr) - 1);
+        $first_array_alement = rand(1, 100);
+        $step_progression = rand(1, 50);
+        $arr = generateProgression($first_array_alement, $step_progression);
+        $rand_number = rand(0, count($arr) - 1);
         
-        $rightAnswer = $arr[$randNum];
-        $arr[$randNum] = '..';
-        $gues = implode(' ', $arr);
+        $right_answer = $arr[$rand_number];
+        $arr[$rand_number] = '..';
+        $question_for_player = implode(' ', $arr);
        
-        return [$rightAnswer, $gues];
+        return [$right_answer, $question_for_player];
     };
 
     play($createData, EXPLANATION);
 }
 
-function generateArray($first, $step)
+function generateProgression($first, $step)
 {
     $result = [];
 
