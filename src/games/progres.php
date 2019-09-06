@@ -6,7 +6,7 @@ use function BrainGames\Game\play;
 
 const EXPLANATION = 'What number is missing in the progression?';
 
-function progressGame()
+function progressionGame()
 {
     $createData = function () {
         $first_array_alement = rand(1, 100);
