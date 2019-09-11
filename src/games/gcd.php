@@ -8,19 +8,19 @@ const EXPLANATION = 'Find the greatest common divisor of given numbers.';
 
 function gcdGame()
 {
-    $createData = function () {
+    $createGameData = function () {
         $number1 = rand(1, 100);
         $number2 = rand(1, 500);
 
-        $question_for_player = "$number1 $number2";
+        $question = "$number1 $number2";
 
-        $right_answer = getGcdGame($number1, $number2);
+        $rightAnswer = getGcd($number1, $number2);
        
-        return [$right_answer, $question_for_player];
+        return [$rightAnswer, $question];
     };
-    play($createData, EXPLANATION);
+    play($createGameData, EXPLANATION);
 }
-function getGcdGame($num1, $num2)
+function getGcd($num1, $num2)
 {
     $min = $num1 < $num2 ? $num1 : $num2;
     while ($min > 0) {

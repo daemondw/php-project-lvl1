@@ -27,7 +27,7 @@
             "src/games/even.php",
             "src/games/calc.php",
             "src/games/gcd.php",
-            "src/games/progres.php",
+            "src/games/progression.php",
             "src/games/prime.php"
         ]
     },

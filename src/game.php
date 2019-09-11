@@ -16,12 +16,12 @@ function play($getInfo, $instr)
     line("Hello, ${name}!" . PHP_EOL);
 
     for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
-        [$right_answer, $question_for_player] = $getInfo();
+        [$rightAnswer, $question] = $getInfo();
 
-        line("Question: {$question_for_player}");
+        line("Question: {$question}");
         $answer = prompt('Your answer');
 
-        if ($right_answer == $answer) {
+        if ($rightAnswer == $answer) {
             line("Correct!");
         } else {
             line("'${answer}' is wrong answer ;(. Correct answer was '${right_answer}'.");

@@ -8,12 +8,12 @@ const EXPLANATION = 'Answer "yes" if number even otherwise answer "no".';
 
 function evenGame()
 {
-    $createData = function () {
-        $question_for_player = rand(0, 99);
-        $right_answer = isEven($question_for_player) ? 'yes' : 'no';
-        return [$right_answer, $question_for_player];
+    $createGameData = function () {
+        $question = rand(0, 99);
+        $rightAnswer = isEven($question) ? 'yes' : 'no';
+        return [$rightAnswer, $question];
     };
-    play($createData, EXPLANATION);
+    play($createGameData, EXPLANATION);
 }
 
 function isEven($num)

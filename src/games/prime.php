@@ -8,14 +8,14 @@ const EXPLANATION = 'Answer "yes" if given number is prime. Otherwise answer "no
 
 function primeGame()
 {
-    $createData = function () {
-        $question_for_player = rand(1, 1087);
+    $createGameData = function () {
+        $question = rand(1, 1087);
         
-        $right_answer = isPrime($question_for_player) ? "yes" : "no";
+        $rightAnswer = isPrime($question) ? "yes" : "no";
 
-        return [$right_answer, $question_for_player];
+        return [$rightAnswer, $question];
     };
-    play($createData, EXPLANATION);
+    play($createGameData, EXPLANATION);
 }
 
 function isPrime($num)
