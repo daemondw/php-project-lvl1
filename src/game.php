@@ -24,7 +24,7 @@ function play($getInfo, $instr)
         if ($rightAnswer == $answer) {
             line("Correct!");
         } else {
-            line("'${answer}' is wrong answer ;(. Correct answer was '${right_answer}'.");
+            line("'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.");
             line("Let's try again, ${name}!");
             exit();
         }
